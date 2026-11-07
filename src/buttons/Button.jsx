@@ -14,10 +14,7 @@ const Button = memo(function Button({
 	loadingText = "Cargando...",
 	...props
 }){
-	const finalClassName = useMemo(
-		() => mergeClasses(DEFAULT_BUTTON_CLASS,className),
-		[className]
-	);
+	const finalClassName = useMemo(() => mergeClasses(DEFAULT_BUTTON_CLASS,className),[className]);
 	return(
 		<button
 			type={type}
